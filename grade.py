@@ -92,3 +92,9 @@ class Classroom(object):
         for student in self.roster.values():
             if student.name == student_name
                 student.delete_homework(homework_name)
+
+    def drop_class_activity(self, activity_name):
+        for student in self.roster.values():
+            student.delete_activity(activity_name)
+
+
