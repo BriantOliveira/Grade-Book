@@ -54,3 +54,13 @@ class Student(object):
             self._update_grade_in_class()
         else:
             print("Student does not have that homework")
+
+    def delete_homework(self, homework_name):
+        if homework_name in self.homeworks:
+            self.homeworks.pop(homework_name, None)
+            self._update_grade_in_class()
+        else:
+            print("Student does not have that homework")
+    def add_homework(self, homework_name, grade):
+        self.homeworks[homework_name] = grade
+        self._update_grade_in_class()
