@@ -102,4 +102,11 @@ class Classroom(object):
             if student.name == student_name
                 return student.GPA
 
-
+    def get_class_average(self):
+        if len(self.roster) == 0:
+            print("No student enrolled...")
+            return None
+        else:
+            point_total = sum([i.GPA for i in self.roster.values()])
+            class_average = point_total / len(self.roster)
+            return class_average
