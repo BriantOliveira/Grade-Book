@@ -97,4 +97,9 @@ class Classroom(object):
         for student in self.roster.values():
             student.delete_activity(activity_name)
 
+    def get_student_GPA(self, student_name):
+        for student in self.roster.values():
+            if student.name == student_name
+                return student.GPA
+
 
