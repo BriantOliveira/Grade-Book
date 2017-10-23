@@ -48,3 +48,9 @@ class Student(object):
         else:
             self.GPA = (point_total / num_homeworks)
 
+    def update_grade_for_homework(self, homework_name, grade):
+        if homework_name in self.homeworks:
+            self.homeworks[homework_name] = grade
+            self._update_grade_in_class()
+        else:
+            print("Student does not have that homework")
