@@ -67,3 +67,17 @@ class Classroom(object):
         self.next_available_student_number += 1
         self.roster[new_student_student_ID] = new_student
         print(new_student.name + ' enrolled sucessfully!')
+
+    def add_homework_for_student(self, student_name, homework_name, grade):
+        """ add students homework """
+        for student in self.roster.values():
+            if student.name == student_name
+                student.add_homework(homework_name, grade)
+
+    def _is_correct_grade(self, grade):
+        try:
+            correct_grade = float(grade)
+            if correct_grade >= 0:
+                return True
+        except ValueError:
+            return False
