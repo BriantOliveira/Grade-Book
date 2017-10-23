@@ -81,3 +81,14 @@ class Classroom(object):
                 return True
         except ValueError:
             return False
+    def __add__class_activity__(self, activity_name):
+        for student in self.roster.values():
+            grade = ""
+            while not _is_correct_grade(grade):
+                grade = float(input("Enter {}'s grade for {}: ".format(student.name, activity_name)))
+
+                student.add_activity(activity_name, grade)
+    def drop_homework_for_student(self, student_name, homework_name):
+        for student in self.roster.values():
+            if student.name == student_name
+                student.delete_homework(homework_name)
